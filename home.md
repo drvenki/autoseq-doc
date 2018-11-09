@@ -5,7 +5,7 @@ Autoseq is a command line tool and it has multiple pipelines used to analyse can
 
  `Pipelines`
 
- * Alassca
+ * Alascca
  * Liqbio
  * RNAseq
 
@@ -33,25 +33,26 @@ Find all conda packages used in autoseq in Anchorage directory -- `/nfs/ALASCCA/
 
 bcftools(1.2), bedtools(2.25.0), bwa(0.7.12), cffi(1.10.0), click(6.7), cnvkit(0.7.9), cryptography(1.8.1), fastqc(0.11.4), freebayes(1.0.1), htslib(1.6), igvtools(2.3.93), lofreq(2.1.2), matplotlib(2.0.2), nose(1.3.7), openpyxl(2.4.0), parallel(20160622), picard(2.5.0), pindel(0.2.5b9), pip(9.0.1), psycopg2(2.7.1), pycparser(2.17), pysam(0.8.4), pytest(3.1.2), pyvcf(0.6.8.dev0), r(3.3.2), bioconductor-variantannotation(1.20.3)(r3.3.2_0), r-data.table(1.10.0), r-devtools(1.12.0), r-getopt(1.20.0), r-ggplot2(2.2.0), r-httr(1.2.1), r-plyr(1.8.4), r-pscbs(0.60.0), r-rcurl(1.95_4.8), r-reshape(0.8.6), r-rjsonio(1.3_0), sambamba(0.5.9), samblaster(0.1.22), samtools(1.2), scalpel(0.5.1), skewer(0.1.126), star(2.4.2a), ucsc-gtftogenepred(332), vardict-java(1.4.3), vardict(2016.02.19), variant-effect-predictor(83), vcflib(1.0.0_rc0), vt(2015.11.10)
 
-### Installation
+Installation
+-------------
 
- Clone the autoseq-scripts repo
+Step 1: Clone the autoseq-scripts repo
 
 ```
 git clone https://github.com/ClinSeq/autoseq-scripts
 ```
- Go to home folder and open .profile file in nano and add the autoseq-scripts cloned directory to the `$PATH` variable
+Step 2: Go to home folder and open .profile file in nano and add the autoseq-scripts cloned directory to the `$PATH` variable
 
 ```
 nano .profile
 ```
- Add this line
+Step 3: Add this line
 
 ```
 export PATH="$PATH:/path/to/directory/autoseq-scripts/"
 ```
 
- Install autoseq core repos using latest git repo.
+Step 4: Install autoseq core repos using latest git repo.
 
 
 ```
@@ -91,6 +92,13 @@ Running Pipelines
 
 ### Alassca
 
+The Alascca pipline is invoked by
+
+```
+autoseq --ref path/to/ref.json --outdir /path/to/outdir --jobdb jobdb.json --cores x --runner_name shellrunner --libdir 
+/path/to/libdir alascca sample.json
+
+```
 
 ### Liqbio
 
